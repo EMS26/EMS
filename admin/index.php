@@ -6,7 +6,7 @@
 
 <head>
     <link rel="stylesheet" href="css/style.css">
-    <title>Sidebar template</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
@@ -23,18 +23,7 @@
         <main class="page-content">
             <div class="container-fluid">
                 <!-- /page-content" -->
-                <div class="row">
-                    <div class="col-9">
-                    <div class="card" style="width: 100%;" >
-                    <div class="card-header ">Header</div>
-                    <div class="card-body ">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <div class="card-footer ">Footer</div>
-                </div>
-                    </div>
-                </div>
+                
                 <!-- ./page-content" -->
             </div>
         </main>

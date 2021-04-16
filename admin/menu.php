@@ -60,7 +60,7 @@
           <div class="sidebar-submenu">
             <ul>
               <li>
-                <a href="#">Add</a>
+                <a href="hall.php">Add</a>
               </li>
               <li>
                 <a href="#">Manage</a>
