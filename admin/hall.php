@@ -23,31 +23,42 @@
         <main class="page-content">
             <div class="container-fluid">
                 <!-- /page-content" -->
-                
+
                 <div class="row">
-                    <div class="col-md-11">
+                    <div class="col-md-8">
                         <div class="card">
                             <div class="card-header ">
                                 <h5>Add New Hall</h5>
                             </div>
                             <div class="card-body ">
                                 <form action="" method="POST">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3" style="text-align: right;"> <label >Name</label></div>
+                                            <div class="col-md-9"> <input type="text" name="name" class="form-control" required></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3" style="text-align: right;"> <label >Capacity</label></div>
+                                            <div class="col-md-9"><input type="number" class="form-control" name="capacity" required></div>
+                                        </div>
 
-                                    <div class="form-group">
-                                        <label>Name</label>
-                                        <input type="text" name="name" class="form-control" required>
+
                                     </div>
                                     <div class="form-group">
-                                        <label>Capacity</label>
-                                        <input type="number" class="form-control" name="capacity" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Air condition</label>
-                                        <select name="air" id="" class="form-control" required>
-                                            <option value="" selected disabled>--select--</option>
-                                            <option value="AC">AC</option>
-                                            <option value="Non-AC">Non-AC</option>
-                                        </select>
+                                        <div class="row">
+                                            <div class="col-md-3"  style="text-align: right;"><label>Air condition</label></div>
+                                            <div class="col-md-9">
+                                                <select name="air" id="" class="form-control" required>
+                                                    <option value="" selected disabled>--select--</option>
+                                                    <option value="AC">AC</option>
+                                                    <option value="Non-AC">Non-AC</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
                                     </div>
                             </div>
                             <div class="card-footer ">
