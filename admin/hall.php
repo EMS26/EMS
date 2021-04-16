@@ -25,7 +25,7 @@
                 <!-- /page-content" -->
 
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <div class="card">
                             <div class="card-header ">
                                 <h5>Add New Hall</h5>
@@ -34,21 +34,34 @@
                                 <form action="" method="POST">
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label >Name</label></div>
-                                            <div class="col-md-9"> <input type="text" name="name" class="form-control" required></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label > <b> Name </b></label></div>
+                                            <div class="col-md-9 "> <input type="text" name="name" class="form-control" required></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label >Capacity</label></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label> <b>Address</b></label></div>
+                                            <div class="col-md-9"><textarea name="address" id="" cols="30" rows="3" class="form-control"></textarea></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Capacity</b></label></div>
                                             <div class="col-md-9"><input type="number" class="form-control" name="capacity" required></div>
                                         </div>
-
-
                                     </div>
+
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3"  style="text-align: right;"><label>Air condition</label></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Amount</b></label></div>
+                                            <div class="col-md-9"><input type="number" class="form-control" name="amount" required></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3"  style="text-align: right;"><label><b>Air condition</b></label></div>
                                             <div class="col-md-9">
                                                 <select name="air" id="" class="form-control" required>
                                                     <option value="" selected disabled>--select--</option>
@@ -57,8 +70,13 @@
                                                 </select>
                                             </div>
                                         </div>
+                                    </div>
 
-
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3" style="text-align: right;"> <label ><b>phone</b></label></div>
+                                            <div class="col-md-9"><input type="number" class="form-control" name="phone" required></div>
+                                        </div>
                                     </div>
                             </div>
                             <div class="card-footer ">
