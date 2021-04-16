@@ -25,7 +25,7 @@
                 <!-- /page-content" -->
                 
                 <div class="row">
-                    <div class="col-md-10">
+                    <div class="col-md-11">
                         <div class="card">
                             <div class="card-header ">
                                 <h5>Add New Hall</h5>
