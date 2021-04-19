@@ -82,10 +82,14 @@
           <div class="sidebar-submenu">
             <ul>
               <li>
-                <a href="#">Add</a>
+                <a href="studio.php">Studio</a>
               </li>
               <li>
-                <a href="#">Manage</a>
+                <a href="#">Studio Manage</a>
+              </li>
+
+              <li>
+                <a href="#">Photograh package</a>
               </li>
             </ul>
           </div>
