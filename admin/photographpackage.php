@@ -66,7 +66,7 @@
                                             <div class="col-md-9"><input type="text" class="form-control" name="album" required></div>
                                         </div>
                                     </div>
-                            </div>
+                               </div>
                             <div class="card-footer ">
                                 <div class="row">
                                     <div class="col"></div>
