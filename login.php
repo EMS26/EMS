@@ -22,6 +22,10 @@
 
         }
 
+a{
+    text-decoration: none;
+    color: #FF1493;
+}
         .card {
             margin: 0 auto;
             /* Added */
@@ -69,7 +73,7 @@
                        
                     </div>
                     <div class="card-footer ">
-                        <a href="admin/index.php" class="btn btn-success" style="width: 100%;">Sign in</a>
+                        <a href="admin/index.php" class="btn "  style="width: 100%; background-color: #FF1493; color: black;">Sign in</a>
                     </div>
                     </form>
                 </div>
