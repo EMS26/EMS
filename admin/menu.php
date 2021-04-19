@@ -115,8 +115,13 @@
               </li>
 
               <li>
-                <a href="#">Photograh </a>
+                <a href="photographpackage.php">Photograh Package</a>
               </li>
+
+              <li>
+                <a href="#">Manage Package</a>
+              </li>
+
             </ul>
           </div>
         </li>
