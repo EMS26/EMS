@@ -28,55 +28,55 @@
                     <div class="col-md-10">
                         <div class="card">
                             <div class="card-header ">
-                                <h5>Add New Hall</h5>
+                                <h5>Add New Vehicle Details</h5>
                             </div>
                             <div class="card-body ">
                                 <form action="" method="POST">
-                                <div class="form-group">
+                                    <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label > <b> Provider </b></label></div>
-                                            <div class="col-md-9 "> <input type="text" name="provider" class="form-control" required></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Vehicle No</b></label></div>
+                                            <div class="col-md-9"><input type="number" class="form-control" name="vehicleno" required></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label > <b>Hall Name </b></label></div>
-                                            <div class="col-md-9 "> <input type="text" name="hallname" class="form-control" required></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label ><b>No Of Seats</b></label></div>
+                                            <div class="col-md-9"><input type="number" class="form-control" name="noofseats" required></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Capacity</b></label></div>
-                                            <div class="col-md-9"><input type="number" class="form-control" name="capacity" required></div>
+                                            <div class="col-md-3"  style="text-align: right;"><label><b>Vehicle Type 1</b></label></div>
+                                            <div class="col-md-9">
+                                                <select name="vehicle" id="" class="form-control" required>
+                                                    <option value="" selected disabled>--select--</option>
+                                                    <option value="car">Car</option>
+                                                    <option value="bus">Bus</option>
+                                                    <option value="van">Van</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3"  style="text-align: right;"><label><b>Vehicle Type</b></label></div>
+                                            <div class="col-md-9">
+                                                <select name="vtype" id="" class="form-control" required>
+                                                    <option value="" selected disabled>--select--</option>
+                                                    <option value="AC">AC</option>
+                                                    <option value="Non-AC">Non-AC</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
 
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Rent With AC</b></label></div>
-                                            <div class="col-md-9"><input type="number" class="form-control" name="rentac" required></div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Rent With Non AC</b></label></div>
-                                            <div class="col-md-9"><input type="number" class="form-control" name="rentnonac" required></div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Advanced Amount</b></label></div>
-                                            <div class="col-md-9"><input type="number" class="form-control" name="advanced" required></div>
-                                        </div>
-                                    </div>
-
-                                   
+                                    
                             </div>
                             <div class="card-footer ">
                                 <div class="row">
                                     <div class="col"></div>
-                                    <div class="col-auto"><input type="submit" value="Save" class="btn btn-success"></div>
-                                    <div class="col-auto"><input type="Reset" value="Reset" class="btn btn-danger"></div>
+                                    <div class="col-auto"><input type="submit" value="Add" class="btn btn-success"></div>
                                 </div>
                             </div>
                             </form>

@@ -19,6 +19,7 @@
         <?php
         include_once('menu.php')
         ?>
+
         <!-- sidebar-wrapper  -->
         <main class="page-content">
             <div class="container-fluid">
@@ -28,57 +29,70 @@
                     <div class="col-md-10">
                         <div class="card">
                             <div class="card-header ">
-                                <h5>Add New Hall</h5>
+                                <h5>Add New Provider Details</h5>
                             </div>
                             <div class="card-body ">
                                 <form action="" method="POST">
-                                <div class="form-group">
+                                    <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label > <b> Provider </b></label></div>
-                                            <div class="col-md-9 "> <input type="text" name="provider" class="form-control" required></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label > <b>Provider  Name </b></label></div>
+                                            <div class="col-md-9 "> <input type="text" name="name" class="form-control" required></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label > <b>Hall Name </b></label></div>
-                                            <div class="col-md-9 "> <input type="text" name="hallname" class="form-control" required></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label > <b>Contact Person </b></label></div>
+                                            <div class="col-md-9 "> <input type="text" name="contactperson" class="form-control" required></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Capacity</b></label></div>
-                                            <div class="col-md-9"><input type="number" class="form-control" name="capacity" required></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Phone Number</b></label></div>
+                                            <div class="col-md-9"><input type="number" class="form-control" name="phone" required></div>
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                      
+                                        <div class="col-md-3" style="text-align: right;" > <label><b> Email </b></label></div>
+                                        <div class="col-md-9"><input type="email" class="form-control" name="email" placeholder="name@example.com"></div>
+                                       
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3" style="text-align: right;"> <label> <b>Address</b></label></div>
+                                            <div class="col-md-9"><textarea name="address" id="" cols="30" rows="3" class="form-control"></textarea></div>
+                                        </div>
+                                    </div>
+                                    
+                                  
+
 
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Rent With AC</b></label></div>
-                                            <div class="col-md-9"><input type="number" class="form-control" name="rentac" required></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Account No</b></label></div>
+                                            <div class="col-md-9"><input type="number" class="form-control" name="accountno" required></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Rent With Non AC</b></label></div>
-                                            <div class="col-md-9"><input type="number" class="form-control" name="rentnonac" required></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label > <b>Bank Name </b></label></div>
+                                            <div class="col-md-9 "> <input type="text" name="bankname" class="form-control" required></div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Advanced Amount</b></label></div>
-                                            <div class="col-md-9"><input type="number" class="form-control" name="advanced" required></div>
-                                        </div>
-                                    </div>
+                                    
 
-                                   
+                                    
                             </div>
                             <div class="card-footer ">
                                 <div class="row">
                                     <div class="col"></div>
-                                    <div class="col-auto"><input type="submit" value="Save" class="btn btn-success"></div>
+                                    <div class="col-auto"><input type="submit" name-="btnsave"value="Save" class="btn btn-success"></div>
                                     <div class="col-auto"><input type="Reset" value="Reset" class="btn btn-danger"></div>
                                 </div>
                             </div>
+                            
                             </form>
                         </div>
                     </div>
