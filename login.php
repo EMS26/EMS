@@ -42,7 +42,7 @@
             <div class="col-md-6">
                 <div class="card  mb-3" style="max-width: 30rem; background-color: rgba(0, 0, 0, 0.800); color: white;">
                     <div class="card-header" style="text-align: center;">
-                        <h5>Login Form</h5>
+                       
                     </div>
                     <div class="card-body ">
                         <form action="" method="POST">
