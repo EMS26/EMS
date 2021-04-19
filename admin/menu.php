@@ -20,7 +20,7 @@
       <i class="fa fa-user"> Profile</i>
       
     </a>&nbsp;&nbsp;&nbsp;
-    <a href="#">
+    <a href="../index.php">
       <i class="fa fa-power-off"> Logout</i>
     </a>
     </span>

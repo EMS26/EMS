@@ -35,7 +35,7 @@ session_start();
 
         ?>
       </nav><!-- .navbar -->
-      <a class="buy-tickets scrollto" href="admin/index.php">Login</a>
+      <a class="buy-tickets scrollto" href="login.php">Login</a>
 
     </div>
   </header><!-- End Header -->
