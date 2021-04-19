@@ -32,60 +32,58 @@
                             </div>
                             <div class="card-body ">
                                 <form action="" method="POST">
-                                <div class="form-group">
+                                    <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label > <b> Provider </b></label></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label> <b> Provider </b></label></div>
                                             <div class="col-md-9 "> <input type="text" name="provider" class="form-control" required></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label > <b>Hall Name </b></label></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label> <b>Hall Name </b></label></div>
                                             <div class="col-md-9 "> <input type="text" name="hallname" class="form-control" required></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Capacity</b></label></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label><b>Capacity</b></label></div>
                                             <div class="col-md-9"><input type="number" class="form-control" name="capacity" required></div>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Rent With AC</b></label></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label><b>Rent With AC</b></label></div>
                                             <div class="col-md-9"><input type="number" class="form-control" name="rentac" required></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Rent With Non AC</b></label></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label><b>Rent With Non AC</b></label></div>
                                             <div class="col-md-9"><input type="number" class="form-control" name="rentnonac" required></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Advanced Amount</b></label></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label><b>Advanced Amount</b></label></div>
                                             <div class="col-md-9"><input type="number" class="form-control" name="advanced" required></div>
                                         </div>
                                     </div>
-
-                                   
                             </div>
                             <div class="card-footer ">
                                 <div class="row">
                                     <div class="col"></div>
                                     <div class="col-auto"><input type="Reset" value="Reset" class="btn btn-primary"> <input type="submit" value="Add hall" class="btn btn-success"></div>
-                                    </div>
                                 </div>
                             </div>
-                            </form>
                         </div>
+                        </form>
                     </div>
                 </div>
-                <!-- ./page-content" -->
             </div>
-        </main>
+            <!-- ./page-content" -->
+    </div>
+    </main>
 
     </div>
     <!-- page-wrapper -->
