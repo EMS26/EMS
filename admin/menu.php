@@ -1,13 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar w/ text</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      
+    </ul>
+    <span class="navbar-text">
+    <a href="#">
+      <i class="fa fa-bell"></i>
+      <span class="badge badge-pill badge-warning notification">3</span>
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="#">
+      <i class="fa fa-envelope"></i>
+      <span class="badge badge-pill badge-success notification">7</span>
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="#">
+      <i class="fa fa-cog"></i>
+      
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="#">
+      <i class="fa fa-power-off"></i>
+    </a>
+    </span>
+  </div>
+</nav>
+
+
+
 <link rel="stylesheet" href="css/style.css">
 <script src="js/script.js"></script>
 <nav id="sidebar" class="sidebar-wrapper">
   <div class="sidebar-content">
-    <div class="sidebar-brand">
-      <a href="#">Event Management</a>
-      <div id="close-sidebar">
-        <!-- <i class="fas fa-times"></i> -->
-      </div>
-    </div>
+   
     <div class="sidebar-header">
 
       <div class="user-info">
@@ -55,37 +81,16 @@
             </ul>
           </div>
         </li>
-
-        
-
-        <li class="sidebar-dropdown">
-          <a href="#">
-          <i class="fas fa-paint-brush"></i>
-            <span>Provider</span>
-
-          </a>
-          <div class="sidebar-submenu">
-            <ul>
-              <li>
-                <a href="provider.php">Add</a>
-              </li>
-              <li>
-                <a href="#">Manage</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-
         <li class="sidebar-dropdown">
           <a href="#">
           <i class="fas fa-male"></i>
-            <span>Staff</span>
+            <span>Customers</span>
 
           </a>
           <div class="sidebar-submenu">
             <ul>
               <li>
-                <a href="staff.php">Add</a>
+                <a href="#">Add</a>
               </li>
               <li>
                 <a href="#">Manage</a>
@@ -110,14 +115,11 @@
               </li>
 
               <li>
-                <a href="#">Photograh package</a>
+                <a href="#">Photograh </a>
               </li>
             </ul>
           </div>
         </li>
-
-
-        
 
         <li class="sidebar-dropdown">
           <a href="#">
@@ -137,8 +139,6 @@
           </div>
         </li>
 
-        
-
 
         <li class="sidebar-dropdown">
           <a href="#">
@@ -149,7 +149,7 @@
           <div class="sidebar-submenu">
             <ul>
               <li>
-                <a href="vehicle.php">Add</a>
+                <a href="#">Add</a>
               </li>
               <li>
                 <a href="#">Manage</a>
@@ -198,20 +198,6 @@
   </div>
   <!-- sidebar-content  -->
   <div class="sidebar-footer">
-    <a href="#">
-      <i class="fa fa-bell"></i>
-      <span class="badge badge-pill badge-warning notification">3</span>
-    </a>
-    <a href="#">
-      <i class="fa fa-envelope"></i>
-      <span class="badge badge-pill badge-success notification">7</span>
-    </a>
-    <a href="#">
-      <i class="fa fa-cog"></i>
-      <span class="badge-sonar"></span>
-    </a>
-    <a href="#">
-      <i class="fa fa-power-off"></i>
-    </a>
+    
   </div>
 </nav>
