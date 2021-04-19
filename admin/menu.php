@@ -55,16 +55,37 @@
             </ul>
           </div>
         </li>
+
+        
+
         <li class="sidebar-dropdown">
           <a href="#">
-          <i class="fas fa-male"></i>
-            <span>Customers</span>
+          <i class="fas fa-paint-brush"></i>
+            <span>Provider</span>
 
           </a>
           <div class="sidebar-submenu">
             <ul>
               <li>
-                <a href="#">Add</a>
+                <a href="provider.php">Add</a>
+              </li>
+              <li>
+                <a href="#">Manage</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="sidebar-dropdown">
+          <a href="#">
+          <i class="fas fa-male"></i>
+            <span>Staff</span>
+
+          </a>
+          <div class="sidebar-submenu">
+            <ul>
+              <li>
+                <a href="staff.php">Add</a>
               </li>
               <li>
                 <a href="#">Manage</a>
@@ -91,6 +112,9 @@
           </div>
         </li>
 
+
+        
+
         <li class="sidebar-dropdown">
           <a href="#">
           <i class="fas fa-paint-brush"></i>
@@ -109,6 +133,8 @@
           </div>
         </li>
 
+        
+
 
         <li class="sidebar-dropdown">
           <a href="#">
@@ -119,7 +145,7 @@
           <div class="sidebar-submenu">
             <ul>
               <li>
-                <a href="#">Add</a>
+                <a href="vehicle.php">Add</a>
               </li>
               <li>
                 <a href="#">Manage</a>
