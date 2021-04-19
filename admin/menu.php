@@ -17,11 +17,11 @@
       <span class="badge badge-pill badge-success notification">7</span>
     </a>&nbsp;&nbsp;&nbsp;
     <a href="#">
-      <i class="fa fa-cog"></i>
+      <i class="fa fa-user"> Profile</i>
       
     </a>&nbsp;&nbsp;&nbsp;
     <a href="#">
-      <i class="fa fa-power-off"></i>
+      <i class="fa fa-power-off"> Logout</i>
     </a>
     </span>
   </div>
