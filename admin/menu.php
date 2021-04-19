@@ -10,19 +10,19 @@
     </ul>
     <span class="navbar-text">
     <a href="#">
-      <i class="fa fa-bell"></i>
-      <span class="badge badge-pill badge-warning notification">3</span>
+      <i class="fa fa-bell" style="color: white;"></i>
+      <span class="badge badge-pill  notification" style="background-color: #FF1493;">3</span>
     </a>&nbsp;&nbsp;&nbsp;
     <a href="#">
-      <i class="fa fa-envelope"></i>
+      <i class="fa fa-envelope"  style="color: white;"></i>
       <span class="badge badge-pill badge-success notification">7</span>
     </a>&nbsp;&nbsp;&nbsp;
     <a href="#">
-      <i class="fa fa-user"> Profile</i>
+      <i class="fa fa-user"  style="color: white;"> Profile</i>
       
     </a>&nbsp;&nbsp;&nbsp;
-    <a href="#">
-      <i class="fa fa-power-off"> Logout</i>
+    <a href="../index.php">
+      <i class="fa fa-power-off"  style="color: white;"> Logout</i>
     </a>
     </span>
   </div>
@@ -41,8 +41,13 @@
         <div class="row">
           <div class="col-4"> <img src="https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png" width="100%" alt=""></div>
           <div class="col-8">
+<<<<<<< HEAD
             <span class="user-name">
               <strong>Thivya</strong>
+=======
+            <span class="user-name">Jhon
+              <strong style="color: #FF1493;">Smith</strong>
+>>>>>>> f79f4e38eef677a7ba2bf40f0828f845ec0d0cab
             </span><br>
             <span class="user-role">Administrator</span><br>
             <span class="user-status">
