@@ -28,60 +28,72 @@
                     <div class="col-md-10">
                         <div class="card">
                             <div class="card-header ">
-                                <h5>Add New Customer Details</h5>
+                                <h5>Add Food menu</h5>
                             </div>
                             <div class="card-body ">
                                 <form action="" method="POST">
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label > <b> Name </b></label></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label > <b> Hall Name </b></label></div>
                                             <div class="col-md-9 "> <input type="text" name="name" class="form-control" required></div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label> <b>Address</b></label></div>
-                                            <div class="col-md-9"><textarea name="address" id="" cols="30" rows="3" class="form-control"></textarea></div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Phone Number</b></label></div>
-                                            <div class="col-md-9"><input type="number" class="form-control" name="phone" required></div>
-                                        </div>
-                                    </div>
+
                                     <div class="form-group">
                                         <div class="row">
                                       
-                                        <div class="col-md-3" style="text-align: right;" > <label><b> Email address</b></label></div>
-                                        <div class="col-md-9"><input type="email" class="form-control" name="email" placeholder="name@example.com"></div>
+                                        <div class="col-md-3" style="text-align: right;" > <label><b> Rate</b></label></div>
+                                        <div class="col-md-9"><input type="rate" class="form-control" name="rate"></div>
                                        
                                         </div>
                                     </div>
+                                   
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Image</b></label></div>
+                                            <div class="col-md-9"> <input type="submit" value="Upload Image" name="submit"></div>
+                                            
+                                        </div>
+                                    </div>
+
 
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Date</b></label></div>
-                                            <div class="col-md-9"><input type="Date" class="form-control" name="date" required></div>
+                                            <div class="col-md-3"  style="text-align: right;"><label><b>Food Time</b></label></div>
+                                            <div class="col-md-9">
+                                                <select name="foodtime" id="" class="form-control" required>
+                                                    <option value="" selected disabled>--select--</option>
+                                                    <option value="car">Breakfast</option>
+                                                    <option value="bus">Lunch</option>
+                                                    <option value="van">Dinner</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>NIC NO</b></label></div>
-                                            <div class="col-md-9"><input type="number" class="form-control" name="nicno" required></div>
+                                            <div class="col-md-3"  style="text-align: right;"><label><b>Food Type</b></label></div>
+                                            <div class="col-md-9">
+                                                <select name="foodtype" id="" class="form-control" required>
+                                                    <option value="" selected disabled>--select--</option>
+                                                    <option value="car">Veg</option>
+                                                    <option value="bus">Non Veg</option>
+                                                    
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    
 
-                                    
-                            </div>
+                             </div>
+                          
                             <div class="card-footer ">
                                 <div class="row">
                                     <div class="col"></div>
-                                    <div class="col-auto"><input type="submit" value="Add" class="btn btn-success">
-                                    <input type="Reset" value="Reset" class="btn btn-primary"> </div>
+                                    <div class="col-auto"><input type="Reset" value="Reset" class="btn btn-primary"> 
+                                    <input type="submit" name-="save" value="Add FoodMenu" class="btn btn-success">
+                                    </div>
                                 </div>
                             </div>
                             </form>

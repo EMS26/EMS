@@ -74,7 +74,8 @@
                             <div class="card-footer ">
                                 <div class="row">
                                     <div class="col"></div>
-                                    <div class="col-auto"><input type="submit" value="Add" class="btn btn-success"></div>
+                                    <div class="col-auto"><input type="submit" value="Add" class="btn btn-success">
+                                    <input type="Reset" value="Reset" class="btn btn-primary"> </div>
                                 </div>
                             </div>
                             </form>

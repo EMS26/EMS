@@ -40,6 +40,12 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
+                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Provider Name</b></label></div>
+                                            <div class="col-md-9"><input type="text" class="form-control" name="providername" required></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
                                             <div class="col-md-3" style="text-align: right;"> <label ><b>No Of Seats</b></label></div>
                                             <div class="col-md-9"><input type="number" class="form-control" name="noofseats" required></div>
                                         </div>
@@ -70,13 +76,26 @@
                                         </div>
                                     </div>
                                     
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3" style="text-align: right;"> <label ><b>KM Rate</b></label></div>
+                                            <div class="col-md-9"><input type="number" class="form-control" name="Txtkmrate" required></div>
+                                        </div>
+                                    </div>
 
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Advanced</b></label></div>
+                                            <div class="col-md-9"><input type="number" class="form-control" name="Txtadvanced" required></div>
+                                        </div>
+                                    </div>
                                     
                             </div>
                             <div class="card-footer ">
                                 <div class="row">
                                     <div class="col"></div>
-                                    <div class="col-auto"><input type="submit" value="Add" class="btn btn-success"></div>
+                                    <div class="col-auto"><input type="submit" value="Add" class="btn btn-success">
+                                                         <input type="Reset" value="Reset" class="btn btn-primary"> </div>
                                 </div>
                             </div>
                             </form>
