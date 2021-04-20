@@ -34,14 +34,14 @@
                                 <form action="" method="POST">
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label > <b> Studio Name </b></label></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label> <b> Studio Name </b></label></div>
                                             <div class="col-md-9 "> <input type="text" name="studio" class="form-control" required></div>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label > <b> Owner Name </b></label></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label> <b> Owner Name </b></label></div>
                                             <div class="col-md-9 "> <input type="text" name="name" class="form-control" required></div>
                                         </div>
                                     </div>
@@ -55,14 +55,31 @@
 
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>phone</b></label></div>
-                                            <div class="col-md-9"><input type="number" class="form-control" name="phone" required></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label><b>phone</b></label></div>
+                                            <div class="col-md-9"><input type="number" onchange="myFunction(this.value)" class="form-control" name="phone" required>
+                                            <p id="phone" style="color: red;"></p>
+                                            </div>
                                         </div>
                                     </div>
 
+                                    <script>
+                                        function myFunction(val) {
+                                            var n = val.length;
+                                            if(n!=10)
+                                            {
+                                                document.getElementById("phone").innerHTML = "Phone number have ten numbers";
+                                            }
+                                            else
+                                            {
+                                                document.getElementById("phone").innerHTML = "";
+
+                                            }
+                                        }
+                                    </script>
+
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Email address</b></label></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label><b>Email address</b></label></div>
                                             <div class="col-md-9"><input type="email" class="form-control" name="email" required></div>
                                         </div>
                                     </div>

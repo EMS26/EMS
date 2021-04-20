@@ -183,14 +183,30 @@
 
         <li class="sidebar-dropdown">
           <a href="#">
-          <i class="fas fa-utensils"></i>
+          <i class="fas fa-users"></i>
             <span>Staffs</span>
-
           </a>
           <div class="sidebar-submenu">
             <ul>
               <li>
                 <a href="staff.php">Add</a>
+              </li>
+              <li>
+                <a href="#">Manage</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="sidebar-dropdown">
+          <a href="#">
+          <i class="fa fa-address-card" aria-hidden="true"></i>
+            <span>Providers</span>
+          </a>
+          <div class="sidebar-submenu">
+            <ul>
+              <li>
+                <a href="provider.php">Add</a>
               </li>
               <li>
                 <a href="#">Manage</a>
