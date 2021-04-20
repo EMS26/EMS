@@ -3,7 +3,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!DOCTYPE html>
 <html lang="en">
-
+<?php include_once('../config.php')?>
 <head>
     <link rel="stylesheet" href="css/style.css">
     <title>Dashboard</title>
@@ -31,6 +31,23 @@
                                 <h5>Add New Hall</h5>
                             </div>
                             <div class="card-body ">
+
+
+                            <!-- database insert  -->
+                             <?php
+                             if(isset($_POST['submit']))
+                             {
+                                 $provider=$_POST['provider'];
+                                 $hallname=$_POST['hallname'];
+                                 $capacity=$_POST['capacity'];
+                                 $rentac=$_POST['rentac'];
+                                 $rentnonac=$_POST['rentnonac'];
+                                 $advanced=$_POST['advanced'];
+                                 
+                             }
+                             ?>
+                            <!-- /database insert  -->
+
                                 <form action="" method="POST">
                                     <div class="form-group">
                                         <div class="row">
@@ -73,7 +90,7 @@
                             <div class="card-footer ">
                                 <div class="row">
                                     <div class="col"></div>
-                                    <div class="col-auto"><input type="Reset" value="Reset" class="btn btn-primary"> <input type="submit" value="Add hall" class="btn btn-success"></div>
+                                    <div class="col-auto"><input type="Reset" value="Reset" class="btn btn-primary"> <input type="submit" value="Add hall" name="submit" class="btn btn-success"></div>
                                 </div>
                             </div>
                         </div>

@@ -80,7 +80,7 @@
                             <div class="card-footer ">
                                 <div class="row">
                                     <div class="col"></div>
-                                    <div class="col-auto"><input type="submit" value="Add" class="btn btn-success">
+                                    <div class="col-auto"><input type="submit" value="Add" class="btn btn-success" name="submit">
                                     <input type="Reset" value="Reset" class="btn btn-primary"> </div>
                                 </div>
                             </div>
