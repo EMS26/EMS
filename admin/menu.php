@@ -3,8 +3,7 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  
-   <!--s="collapse navbar-collapse" id="navbarText">
+  <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       
     </ul>
@@ -26,7 +25,7 @@
     </a>
     </span>
   </div>
-</nav> -->
+</nav>
 
 
 
@@ -41,13 +40,8 @@
         <div class="row">
           <div class="col-4"> <img src="https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png" width="100%" alt=""></div>
           <div class="col-8">
-<<<<<<< HEAD
-            <span class="user-name">
-              <strong>Thivya</strong>
-=======
             <span class="user-name">Jhon
               <strong style="color: #FF1493;">Smith</strong>
->>>>>>> f79f4e38eef677a7ba2bf40f0828f845ec0d0cab
             </span><br>
             <span class="user-role">Administrator</span><br>
             <span class="user-status">
@@ -87,43 +81,6 @@
             </ul>
           </div>
         </li>
-
-        <li class="sidebar-dropdown">
-          <a href="#">
-          <i class="fas fa-male"></i>
-            <span>Providers</span>
-
-          </a>
-          <div class="sidebar-submenu">
-            <ul>
-              <li>
-                <a href="provider.php">Add</a>
-              </li>
-              <li>
-                <a href="#">Manage</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="sidebar-dropdown">
-          <a href="#">
-          <i class="fas fa-male"></i>
-            <span>Staff</span>
-
-          </a>
-          <div class="sidebar-submenu">
-            <ul>
-              <li>
-                <a href="staff.php">Add</a>
-              </li>
-              <li>
-                <a href="#">Manage</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-
         <li class="sidebar-dropdown">
           <a href="#">
           <i class="fas fa-male"></i>
@@ -133,7 +90,7 @@
           <div class="sidebar-submenu">
             <ul>
               <li>
-                <a href="customer.php">Add</a>
+                <a href="#">Add</a>
               </li>
               <li>
                 <a href="#">Manage</a>
@@ -178,16 +135,10 @@
           <div class="sidebar-submenu">
             <ul>
               <li>
-                <a href="#">Beauty parlor</a>
+                <a href="#">Add</a>
               </li>
               <li>
-                <a href="#">Manage Beauty parlor</a>
-              </li>
-              <li>
-                <a href="#">Beautician Package</a>
-              </li>
-              <li>
-                <a href="#">Manage Package</a>
+                <a href="#">Manage</a>
               </li>
             </ul>
           </div>
@@ -222,6 +173,24 @@
             <ul>
               <li>
                 <a href="foodmenu.php">Add</a>
+              </li>
+              <li>
+                <a href="#">Manage</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="sidebar-dropdown">
+          <a href="#">
+          <i class="fas fa-utensils"></i>
+            <span>Staffs</span>
+
+          </a>
+          <div class="sidebar-submenu">
+            <ul>
+              <li>
+                <a href="staff.php">Add</a>
               </li>
               <li>
                 <a href="#">Manage</a>
