@@ -1,3 +1,4 @@
+<?php include_once('../config.php') ?>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -29,47 +30,76 @@
                         <div class="card">
                             <div class="card-header ">
                                 <h5>Add New Customer Details</h5>
+                                <!-- insert database  -->
+                                <?php
+                                if(isset($_POST['btnsubmit']))
+                                {
+                                    $name=$_POST['Txtname'];
+                                    $address=$_POST['Txtaddress'];
+                                    $phone=$_POST['Txtphoneno'];
+                                    $email=$_POST['Txtemail'];
+                                    $Regdate=$_POST['Regdate'];
+                                    $nicno=$_POST['Txtnicno'];
+                                    
+
+                                    $sql="insert into customer (Customer_name,Customer_address,Customer_tpno,Customer_email,Cus_reg_date,Cus_nicno) values ('$name','$address',$phone,'$email','$Regdate','$nicno')";
+                                    if(mysqli_query($con,$sql))
+                                    {
+                                        ?>
+                                <div class="alert alert-success" role="alert">
+                                    Insert sucessfully!
+                                </div>
+                                <meta http-equiv="refresh" content="30">
+                                <?php
+                                    }
+                                    else
+                                    {
+                                        echo "error";
+                                    }
+                                }
+                                ?>
+                                <!-- /insert database  -->
                             </div>
                             <div class="card-body ">
                                 <form action="" method="POST">
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label > <b> Name </b></label></div>
-                                            <div class="col-md-9 "> <input type="text" name="name" class="form-control" required></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label > <b>Customer Name </b></label></div>
+                                            <div class="col-md-9 "> <input type="text" name="Txtname" class="form-control" required></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-md-3" style="text-align: right;"> <label> <b>Address</b></label></div>
-                                            <div class="col-md-9"><textarea name="address" id="" cols="30" rows="3" class="form-control"></textarea></div>
+                                            <div class="col-md-9"><textarea name="Txtaddress" id="" cols="30" rows="3" class="form-control"></textarea></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-md-3" style="text-align: right;"> <label ><b>Phone Number</b></label></div>
-                                            <div class="col-md-9"><input type="number" class="form-control" name="phone" required></div>
+                                            <div class="col-md-9"><input type="number" class="form-control" name="Txtphoneno" required></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
                                       
                                         <div class="col-md-3" style="text-align: right;" > <label><b> Email address</b></label></div>
-                                        <div class="col-md-9"><input type="email" class="form-control" name="email" placeholder="name@example.com"></div>
+                                        <div class="col-md-9"><input type="email" class="form-control" name="Txtemail" placeholder="name@example.com"></div>
                                        
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Date</b></label></div>
-                                            <div class="col-md-9"><input type="Date" class="form-control" name="date" required></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Registered Date</b></label></div>
+                                            <div class="col-md-9"><input type="Date" class="form-control" name="Regdate" required></div>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-md-3" style="text-align: right;"> <label ><b>NIC NO</b></label></div>
-                                            <div class="col-md-9"><input type="number" class="form-control" name="nicno" required></div>
+                                            <div class="col-md-9"><input type="number" class="form-control" name="Txtnicno" required></div>
                                         </div>
                                     </div>
 
@@ -80,8 +110,8 @@
                             <div class="card-footer ">
                                 <div class="row">
                                     <div class="col"></div>
-                                    <div class="col-auto"><input type="submit" value="Add" class="btn btn-success" name="submit">
-                                    <input type="Reset" value="Reset" class="btn btn-primary"> </div>
+                                    <div class="col-auto"><input type="submit" value="Add" class="btn btn-success" name="btnsubmit">
+                                    <input type="Reset" value="Reset" class="btn btn-primary" name="reset"> </div>
                                 </div>
                             </div>
                             </form>

@@ -1,3 +1,4 @@
+<?php include_once('../config.php') ?>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -29,13 +30,40 @@
                         <div class="card">
                             <div class="card-header ">
                                 <h5>Add New Staff</h5>
+                                <!-- insert database  -->
+                                <?php
+                                if(isset($_POST['submit']))
+                                {
+                                    $staffname=$_POST['staffname'];
+                                    $address=$_POST['address'];
+                                    $phoneno=$_POST['phoneno'];
+                                    $email=$_POST['email'];
+                                    $nicno=$_POST['nicno'];
+
+                                    $sql="insert into staff (Staff_name,Staff_tpno,Staff_email,Staff_address,Staff_nic,) values ('$staffname','$address',$phoneno,'$email','$nicno')";
+                                    if(mysqli_query($con,$sql))
+                                    {
+                                        ?>
+                                <div class="alert alert-success" role="alert">
+                                    Insert sucessfully!
+                                </div>
+                                <meta http-equiv="refresh" content="30">
+                                <?php
+                                    }
+                                    else
+                                    {
+                                        echo "error";
+                                    }
+                                }
+                                ?>
+                                <!-- /insert database  -->
                             </div>
                             <div class="card-body ">
                                 <form action="" method="POST">
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-md-3" style="text-align: right;"> <label > <b> Name </b></label></div>
-                                            <div class="col-md-9 "> <input type="text" name="name" class="form-control" required></div>
+                                            <div class="col-md-9 "> <input type="text" name="staffname" class="form-control" required></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -47,7 +75,7 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-md-3" style="text-align: right;"> <label ><b>Phone Number</b></label></div>
-                                            <div class="col-md-9"><input type="number" class="form-control" name="phone" required></div>
+                                            <div class="col-md-9"><input type="number" class="form-control" name="phoneno" required></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -74,7 +102,7 @@
                             <div class="card-footer ">
                                 <div class="row">
                                     <div class="col"></div>
-                                    <div class="col-auto"><input type="submit" value="Add" class="btn btn-success">
+                                    <div class="col-auto"><input type="submit" value="Add" class="btn btn-success" name="submit">
                                     <input type="Reset" value="Reset" class="btn btn-primary"> </div>
                                 </div>
                             </div>

@@ -90,7 +90,7 @@
           <div class="sidebar-submenu">
             <ul>
               <li>
-                <a href="#">Add</a>
+                <a href="customer.php">Add</a>
               </li>
               <li>
                 <a href="#">Manage</a>
