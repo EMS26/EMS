@@ -40,8 +40,7 @@
                                     $email=$_POST['Txtemail'];
                                     $Regdate=$_POST['Regdate'];
                                     $nicno=$_POST['Txtnicno'];
-                                    
-
+                        
                                     $sql="insert into customer (Customer_name,Customer_address,Customer_tpno,Customer_email,Cus_reg_date,Cus_nicno) values ('$name','$address',$phone,'$email','$Regdate','$nicno')";
                                     if(mysqli_query($con,$sql))
                                     {
