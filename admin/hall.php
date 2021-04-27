@@ -51,7 +51,12 @@
                                             Insert sucessfully!
                                             <?php echo "<meta http-equiv='refresh' content='0.6'>"; ?>
                                         </div>
-                                <?php
+                                        <?php
+                                    }
+                                    else
+                                    {
+                                        echo "Error: " . $sql . "<br>" .
+                                        mysqli_error($con);
                                     }
                                 }
                                 ?>
