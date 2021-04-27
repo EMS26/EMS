@@ -48,13 +48,15 @@
                                         ?>
                                 <div class="alert alert-success" role="alert">
                                     Insert sucessfully!
+                                    <?php  echo "<meta http-equiv='refresh' content='0.6'>"; ?>
                                 </div>
-                                <meta http-equiv="refresh" content="30">
+                               
                                 <?php
                                     }
                                     else
                                     {
-                                        echo "error";
+                                        echo "Error: " . $sql . "<br>" .
+                                        mysqli_error($con);
                                     }
                                 }
                                 ?>

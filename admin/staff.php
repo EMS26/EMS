@@ -32,27 +32,26 @@
                                 <h5>Add New Staff</h5>
                                 <!-- insert database  -->
                                 <?php
-                                if(isset($_POST['submit']))
-                                {
-                                    $staffname=$_POST['staffname'];
-                                    $address=$_POST['address'];
-                                    $phoneno=$_POST['phoneno'];
-                                    $email=$_POST['email'];
-                                    $nicno=$_POST['nicno'];
+                                if (isset($_POST['submit'])) {
+                                    $staffname = $_POST['staffname'];
+                                    $address = $_POST['address'];
+                                    $phoneno = $_POST['phoneno'];
+                                    $email = $_POST['email'];
+                                    $nicno = $_POST['nicno'];
 
-                                    $sql="insert into staff (Staff_name,Staff_tpno,Staff_email,Staff_address,Staff_nic,) values ('$staffname','$address',$phoneno,'$email','$nicno')";
-                                    if(mysqli_query($con,$sql))
-                                    {
-                                        ?>
-                                <div class="alert alert-success" role="alert">
-                                    Insert sucessfully!
-                                </div>
-                                <meta http-equiv="refresh" content="30">
+                                    $sql = "insert into staff (Staff_name,Staff_tpno,Staff_email,Staff_address,Staff_nic) values ('$staffname',$phoneno,'$email','$address','$nicno')";
+                                    if (mysqli_query($con, $sql)) {
+                                ?>
+                                        <div class="alert alert-success" role="alert">
+                                            Insert sucessfully!
+
+                                            <?php echo "<meta http-equiv='refresh' content='0.6'>"; ?>
+                                        </div>
+                                       
                                 <?php
-                                    }
-                                    else
-                                    {
-                                        echo "error";
+                                    } else {
+                                        echo "Error: " . $sql . "<br>" .
+                                            mysqli_error($con);
                                     }
                                 }
                                 ?>
@@ -62,7 +61,7 @@
                                 <form action="" method="POST">
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label > <b> Name </b></label></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label> <b> Name </b></label></div>
                                             <div class="col-md-9 "> <input type="text" name="staffname" class="form-control" required></div>
                                         </div>
                                     </div>
@@ -74,36 +73,37 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>Phone Number</b></label></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label><b>Phone Number</b></label></div>
                                             <div class="col-md-9"><input type="number" class="form-control" name="phoneno" required></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                      
-                                        <div class="col-md-3" style="text-align: right;" > <label><b> Email address</b></label></div>
-                                        <div class="col-md-9"><input type="email" class="form-control" name="email" placeholder="name@example.com"></div>
-                                       
+
+                                            <div class="col-md-3" style="text-align: right;"> <label><b> Email address</b></label></div>
+                                            <div class="col-md-9"><input type="email" class="form-control" name="email" placeholder="name@example.com"></div>
+
                                         </div>
                                     </div>
 
 
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3" style="text-align: right;"> <label ><b>NIC NO</b></label></div>
-                                            <div class="col-md-9"><input type="number" class="form-control" name="nicno" required></div>
+                                            <div class="col-md-3" style="text-align: right;"> <label><b>NIC NO</b></label></div>
+                                            <div class="col-md-9"><input type="text" class="form-control" name="nicno" required></div>
                                         </div>
                                     </div>
 
-                                    
 
-                                    
+
+
                             </div>
                             <div class="card-footer ">
                                 <div class="row">
                                     <div class="col"></div>
-                                    <div class="col-auto"><input type="submit" value="Add" class="btn btn-success" name="submit">
-                                    <input type="Reset" value="Reset" class="btn btn-primary"> </div>
+                                    <div class="col-auto"> <input type="Reset" value="Reset" class="btn btn-primary"> <input type="submit" value="Add Staff" class="btn btn-success" name="submit">
+                                       
+                                    </div>
                                 </div>
                             </div>
                             </form>
