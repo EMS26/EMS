@@ -33,6 +33,28 @@
                                 <h5>Halls</h5>
                             </div>
                             <div class="card-body ">
+                                <?PHP
+                            if(isset($_GET['delete']))
+                            {
+                                $id=$_GET['delete'];
+                                $sql="delete from hall where Hall_id=$id";
+                                if(mysqli_query($con,$sql))
+                                {
+                                    ?>
+                                <div class="alert alert-danger" role="alert">
+                                    Delete sucessfully!
+                                </div>
+                                <?php
+                                
+                                }
+                                else
+                                {
+                                    echo "Error: " . $sql . "<br>" .
+                                    mysqli_error($con);
+                                }
+                            }
+                            ?>
+
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead>
@@ -76,11 +98,46 @@
                                                                     style="background-color: #ffaa00 ;"><i
                                                                         class="far fa-edit" style="color: #ffffff;"></i>
                                                                 </a>
-                                                                <a href="?delete=<?php echo $row['Hall_id'];?>" class="btn btn-sm"
-                                                                    style="background-color: #bf0502;"> <i
+                                                                <a href="?delete=<?php echo $row['Hall_id'];?>"
+                                                                    class="btn btn-sm"
+                                                                    style="background-color: #bf0502;"
+                                                                    data-toggle="modal"
+                                                                    data-target="#exampleModalCenter"> <i
                                                                         class="far fa-trash-alt"
                                                                         style="color: #ffffff;"></i> </a>
-                                                                
+
+                                                                <!-- Modal -->
+                                                                <div class="modal fade" id="exampleModalCenter"
+                                                                    tabindex="-1" role="dialog"
+                                                                    aria-labelledby="exampleModalCenterTitle"
+                                                                    aria-hidden="true">
+                                                                    <div class="modal-dialog modal-dialog-centered"
+                                                                        role="document">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <button type="button" class="close"
+                                                                                    data-dismiss="modal"
+                                                                                    aria-label="Close">
+                                                                                    <span
+                                                                                        aria-hidden="true">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <p style="color: red; font-weight: bold;">Are you sure you want to delete this hall?</p>
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                                <button type="button"
+                                                                                    class="btn btn-secondary"
+                                                                                    data-dismiss="modal">No</button>
+                                                                                <!-- <button type="button" class="btn btn-primary">Yes</button> -->
+                                                                                <a href="?delete=<?php echo $row['Hall_id'];?>"
+                                                                                    class="btn btn-Primary">Yes</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- /Modal -->
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -108,6 +165,10 @@
     </main>
 
     </div>
+
+
+
+
     <!-- page-wrapper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
@@ -116,6 +177,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+
 
 </body>
 

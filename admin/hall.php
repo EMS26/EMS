@@ -59,7 +59,7 @@ if(isset($_GET['edit']))
                 <!-- /page-content" -->
 
                 <div class="row">
-                    <div class="col-md-10">
+                    <div class="col-md-11">
                         <div class="card">
                             <div class="card-header ">
                                 <h5>Add New Hall</h5>
@@ -94,6 +94,36 @@ if(isset($_GET['edit']))
                                 }
                                 ?>
                                 <!-- /database insert  -->
+
+
+
+                                <!-- database update  -->
+                                <?php
+                                if (isset($_POST['update'])) {
+                                    $provider = $_POST['provider'];
+                                    $hallname = $_POST['hallname'];
+                                    $capacity = $_POST['capacity'];
+                                    $rentac = $_POST['rentac'];
+                                    $rentnonac = $_POST['rentnonac'];
+                                    $advanced = $_POST['advanced'];
+
+                                    $sql = "UPDATE hall SET Provider_id=$provider,Hall_name='$hallname',Hall_capacity=$capacity,Rent_with_ac=$rentac,Rent_without_ac=$rentnonac,Advanced=$advanced WHERE Hall_id=$id";
+                                    if (mysqli_query($con, $sql)) {
+                                ?>
+                                <div class="alert alert-success" role="alert">
+                                    Update sucessfully!
+                                    <?php echo "<meta http-equiv='refresh' content='0.6'>"; ?>
+                                </div>
+                                <?php
+                                    }
+                                    else
+                                    {
+                                        echo "Error: " . $sql . "<br>" .
+                                        mysqli_error($con);
+                                    }
+                                }
+                                ?>
+                                <!-- /database update  -->
 
                                 <form action="" method="POST">
                                     <div class="form-group">
@@ -200,7 +230,7 @@ if(isset($_GET['edit']))
                                           if(isset($_GET['edit']))
                                           {
                                               ?>
-                                        <input type="Submit" value="Update" class="btn btn-primary">
+                                        <input type="Submit" name="update" value="Update" class="btn btn-primary">
                                         <?php
                                           }
                                           else
