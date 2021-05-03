@@ -76,7 +76,7 @@
                 <a href="hall.php">Add</a>
               </li>
               <li>
-                <a href="#">Manage</a>
+                <a href="halls.php">Manage</a>
               </li>
             </ul>
           </div>
