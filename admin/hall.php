@@ -92,6 +92,35 @@ if(isset($_GET['edit']))
                                         mysqli_error($con);
                                     }
                                 }
+
+
+
+                                if (isset($_POST['submit'])){
+    $output_dir = "upload/";/* Path for file upload */
+	$RandomNum   = time();
+	$ImageName      = str_replace(' ','-',strtolower($_FILES['image']['name'][0]));
+	$ImageType      = $_FILES['image']['type'][0];
+ 
+	$ImageExt = substr($ImageName, strrpos($ImageName, '.'));
+	$ImageExt       = str_replace('.','',$ImageExt);
+	$ImageName      = preg_replace("/\.[^.\s]{3,4}$/", "", $ImageName);
+	$NewImageName = $ImageName.'-'.$RandomNum.'.'.$ImageExt;
+    $ret[$NewImageName]= $output_dir.$NewImageName;
+	
+	/* Try to create the directory if it does not exist */
+	if (!file_exists($output_dir))
+	{
+		@mkdir($output_dir, 0777);
+	}               
+	move_uploaded_file($_FILES["image"]["tmp_name"][0],$output_dir."/".$NewImageName );
+	     $sql = "INSERT INTO `hall_photos`(`Hall_id`,`photo`) VALUES (1,'$NewImageName')";
+		if (mysqli_query($con, $sql)) {
+			echo "successfully !";
+		}
+		else {
+		echo "Error: " . $sql . "" . mysqli_error($cn);
+	 }
+    }
                                 ?>
                                 <!-- /database insert  -->
 
@@ -125,7 +154,7 @@ if(isset($_GET['edit']))
                                 ?>
                                 <!-- /database update  -->
 
-                                <form action="" method="POST">
+                                <form action="" method="POST" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-md-3" style="text-align: right;"> <label> <b> Provider
@@ -194,6 +223,8 @@ if(isset($_GET['edit']))
                                         </div>
                                     </div>
 
+                                   
+
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-md-3" style="text-align: right;"> <label><b>Rent With
@@ -221,6 +252,17 @@ if(isset($_GET['edit']))
                                                     value="<?php if(isset($_GET['edit'])){echo $advanced;}?>"></div>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3" style="text-align: right;">
+                                                <label><b>Image</b></label>
+                                            </div>
+                                            <div class="col-md-9"><input type="file" class="form-control"
+                                            name="image[]" required></div>
+                                        </div>
+                                    </div>
+                                    
                             </div>
                             <div class="card-footer ">
                                 <div class="row">
