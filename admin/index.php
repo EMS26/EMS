@@ -23,7 +23,16 @@
         <main class="page-content">
             <div class="container-fluid">
                 <!-- /page-content" -->
-                
+                <?php
+                    if(isset($_GET['pg']))
+                    {
+                        include($_GET['pg']);
+                    }
+                    else
+                    {
+                        include("home.php");
+                    }
+                    ?>
                 <!-- ./page-content" -->
             </div>
         </main>

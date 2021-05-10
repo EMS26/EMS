@@ -29,6 +29,9 @@
                         <div class="card">
                             <div class="card-header ">
                                 <h5>Add New Vehicle Details</h5>
+                              
+
+                                
                             </div>
                             <div class="card-body ">
                                 <form action="" method="POST">
@@ -54,7 +57,7 @@
                                         <div class="row">
                                             <div class="col-md-3"  style="text-align: right;"><label><b>Vehicle Type 1</b></label></div>
                                             <div class="col-md-9">
-                                                <select name="vehicle" id="" class="form-control" required>
+                                                <select name="vehicletype" id="" class="form-control" required>
                                                     <option value="" selected disabled>--select--</option>
                                                     <option value="car">Car</option>
                                                     <option value="bus">Bus</option>
@@ -94,7 +97,7 @@
                             <div class="card-footer ">
                                 <div class="row">
                                     <div class="col"></div>
-                                    <div class="col-auto"><input type="submit" value="Add" class="btn btn-success">
+                                    <div class="col-auto"><input type="submit" value="Add" name="submit" class="btn btn-success">
                                                          <input type="Reset" value="Reset" class="btn btn-primary"> </div>
                                 </div>
                             </div>

@@ -67,16 +67,16 @@
         <li class="sidebar-dropdown">
           <a href="#">
           <i class="fas fa-university"></i>
-            <span>Halls</span>
+            <span>Manage</span>
 
           </a>
           <div class="sidebar-submenu">
             <ul>
               <li>
-                <a href="hall.php">Add</a>
+                <a href="index.php?pg=provider.php&option=view">Providers</a>
               </li>
               <li>
-                <a href="halls.php">Manage</a>
+                <a href="halls.php">Hall</a>
               </li>
             </ul>
           </div>
@@ -206,7 +206,7 @@
           <div class="sidebar-submenu">
             <ul>
               <li>
-                <a href="provider.php">Add</a>
+                <a href="index.php?pg=provider.php&option=new">Add</a>
               </li>
               <li>
                 <a href="#">Manage</a>
