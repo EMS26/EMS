@@ -76,7 +76,19 @@
                 <a href="index.php?pg=provider.php&option=view">Providers</a>
               </li>
               <li>
-                <a href="halls.php">Hall</a>
+                <a href="index.php?pg=hall.php&option=view">Hall</a>
+              </li>
+              <li>
+                <a href="index.php?pg=vehicle.php&option=view">Vehicles</a>
+              </li>
+              <li>
+                <a href="index.php?pg=vehicle.php&option=view">Staffs</a>
+              </li>
+              <li>
+                <a href="index.php?pg=vehicle.php&option=view">Foodmenu</a>
+              </li>
+              <li>
+                <a href="index.php?pg=vehicle.php&option=view">Beautician</a>
               </li>
             </ul>
           </div>
@@ -125,80 +137,10 @@
             </ul>
           </div>
         </li>
+  
+       
 
-        <li class="sidebar-dropdown">
-          <a href="#">
-          <i class="fas fa-paint-brush"></i>
-            <span>Beautician</span>
-
-          </a>
-          <div class="sidebar-submenu">
-            <ul>
-              <li>
-                <a href="#">Add</a>
-              </li>
-              <li>
-                <a href="#">Manage</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-
-        <li class="sidebar-dropdown">
-          <a href="#">
-          <i class="fas fa-bus"></i>
-            <span>Vehicles</span>
-
-          </a>
-          <div class="sidebar-submenu">
-            <ul>
-              <li>
-                <a href="vehicle.php">Add</a>
-              </li>
-              <li>
-                <a href="#">Manage</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="sidebar-dropdown">
-          <a href="#">
-          <i class="fas fa-utensils"></i>
-            <span>Foods</span>
-
-          </a>
-          <div class="sidebar-submenu">
-            <ul>
-              <li>
-                <a href="foodmenu.php">Add</a>
-              </li>
-              <li>
-                <a href="#">Manage</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="sidebar-dropdown">
-          <a href="#">
-          <i class="fas fa-users"></i>
-            <span>Staffs</span>
-          </a>
-          <div class="sidebar-submenu">
-            <ul>
-              <li>
-                <a href="staff.php">Add</a>
-              </li>
-              <li>
-                <a href="#">Manage</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="sidebar-dropdown">
+        <!--<li class="sidebar-dropdown">
           <a href="#">
           <i class="fa fa-address-card" aria-hidden="true"></i>
             <span>Providers</span>
@@ -213,7 +155,7 @@
               </li>
             </ul>
           </div>
-        </li>
+        </li>-->
 
         <li class="header-menu">
           <span>Extra</span>

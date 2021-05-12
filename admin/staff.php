@@ -1,29 +1,21 @@
 <?php include_once('../config.php') ?>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css/style.css">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    
 </head>
 
 <body>
-    <div class="page-wrapper chiller-theme toggled">
-        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
-            <i class="fas fa-bars"></i>
-        </a>
+    
         <?php
-        include_once('menu.php')
+         
+         if(isset($_GET['option']))
+         {
+             if($_GET['option']=="new")
+             {
+           
         ?>
-        <!-- sidebar-wrapper  -->
-        <main class="page-content">
-            <div class="container-fluid">
-                <!-- /page-content" -->
+          <!-- /page-content" -->
 
                 <div class="row">
                     <div class="col-md-10">
@@ -101,7 +93,9 @@
                             <div class="card-footer ">
                                 <div class="row">
                                     <div class="col"></div>
-                                    <div class="col-auto"> <input type="Reset" value="Reset" class="btn btn-primary"> <input type="submit" value="Add Staff" class="btn btn-success" name="submit">
+                                    <div class="col-auto"> <input type="Reset" value="Reset" class="btn btn-primary"> 
+                                    <input type="submit" value="Add Staff" class="btn btn-success" name="submit">
+                                    <a href="index.php?pg=staff.php&option=view"> <input type="button" name="submit" value="Cancel" class="btn btn-success"></a>
                                        
                                     </div>
                                 </div>
@@ -111,15 +105,76 @@
                     </div>
                 </div>
                 <!-- ./page-content" -->
+     
+                <?php
+        
+    }
+    
+    else  if($_GET['option']=="view")
+    {
+        
+$sqlview="select * from staff";
+$result=mysqli_query($con,$sqlview) or die("Error in sqlview: ".mysqli_error($con));
+echo '<div class="col-md-12">
+   <div class="card">
+       <div class="card-header ">
+           <h5>Add New Staff Details</h5>
+           <div>
+           <div class="row">
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <a href="index.php?pg=staff.php&option=new"><input type="button" name="submit" style="float:right" value="Add " class="btn btn-success"></a>
+                </div>
+                <div class="col-md-1">
+                    <input type="button" name="Print" style="float:left" value="Print " class="btn btn-success">    
+                </div> 
             </div>
-        </main>
+        </div>
+        </div>
+        <div class="card-body ">';
 
-    </div>
-    <!-- page-wrapper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            echo'<table class="table table-bordered table-condensed table-hover table-striped"><thead><tr>
+            <th>Staff Id</th>
 
+            <th>Staff name</th>
+            <th>Staff TPNo</th>
+            <th>Staff Email</th>
+            <th>Staff address</th>
+            <th>Staff NIC</th>
+            </tr></thead><tbody>';
+
+            while($row=mysqli_fetch_assoc($result))
+            {
+                echo '<tr><td>'.$row ['Staff_id'].'</td>
+                            <td>'.$row['Staff_name'].'</td>
+                            <td>'.$row['Staff_tpno'].'</td>
+                            <td>'.$row['Staff_email'].'</td>
+                            <td>'.$row['Staff_address'].'</td>
+                            <td>'.$row['Staff_nic'].'</td>
+                            </tr>';
+                }
+                echo '</tbody></table>';
+echo '</div></div></div>';
+
+
+}
+    else  if($_GET['option']=="find")
+    {
+
+
+    }
+    else  if($_GET['option']=="edit")
+    {
+
+
+    }
+    else  if($_GET['option']=="delete")
+    {
+
+
+    }
+}
+?>
 </body>
 
 </html>
