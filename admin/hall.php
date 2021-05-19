@@ -297,7 +297,7 @@ if(isset($_GET['edit']))
                 </div>
             </div>
             <!-- ./page-content" -->
-         <!-- ./page-content" -->
+         
          <?php
         
     }

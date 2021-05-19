@@ -7,56 +7,72 @@
 </head>
 
 <body>                
-        <?php
-        if(isset($_GET['option']))
-        {
-            if($_GET['option']=="new")
-            {
-          ?>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header ">
-                                <h5>Add New Provider Details</h5>
+      
                                 <!-- insert database  -->
                                 <?php
                                 if(isset($_POST['submit']))
                                 {
-                                    $name=$_POST['name'];
-                                    $contactperson=$_POST['contactperson'];
-                                    $phone=$_POST['phone'];
-                                    $email=$_POST['email'];
-                                    $address=$_POST['address'];
-                                    $accountno=$_POST['accountno'];
-                                    $bankname=$_POST['bankname'];
-
-                                    $sql="insert into providers (Provider_name,Contact_person,Provider_phno,Provider_email,Provider_address,Provider_accountno,Bank_name) values ('$name','$contactperson',$phone,'$email','$address','$accountno','$bankname')";
-                                    if(mysqli_query($con,$sql))
-                                    {
-                                        ?>
-                                <div class="alert alert-success" role="alert">
-                                    Insert sucessfully!
-                                </div>
-                                <?php  echo "<meta http-equiv='refresh' content='0.6'>"; ?>
-                                <?php
-                                    }
-                                    else
-                                    {
-                                        echo "Error: " . $sql . "<br>" .
-                                        mysqli_error($con);
-                                    }
+                                    $sqlinsertprovider="insert into providers(Provider_id,Provider_name,Contact_person,Provider_phno,Provider_email,Provider_address,Provider_accountno,Bank_name)
+                                    values('".mysqli_real_escape_string($con,$_POST['txtproviderid'])."',
+                                    '".mysqli_real_escape_string($con,$_POST['txtname'])."',
+                                    '".mysqli_real_escape_string($con,$_POST['txtcontactperson'])."',
+                                    '".mysqli_real_escape_string($con,$_POST['txtphone'])."',
+                                    '".mysqli_real_escape_string($con,$_POST['txtemail'])."',
+                                    '".mysqli_real_escape_string($con,$_POST['txtaddress'])."',
+                                    '".mysqli_real_escape_string($con,$_POST['txtaccountno'])."',
+                                    '".mysqli_real_escape_string($con,$_POST['txtbankname'])."',);
+                                    $sqlinsertprovider=mysqli_query($con,$sqlinsertprovider)or die("Error in sqlinsert provider section:".mysqli_error($con));
+                                
+                                    echo '<script> window.location.href="index.php?pg=provider.php&option=create&Provider_id='.$_POST['txtproviderid'].'"; </script>';
+                                    
                                 }
                                 ?>
                                 <!-- /insert database  -->
 
-                            </div>
-                            <div class="card-body ">
-                                <form action="" method="POST">
+                            
+                                <?php
+                                if(isset($_GET['option']))
+                                {
+                                    if($_GET['option']=="new")
+                                    {
+                                  ?>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header ">
+                                                        <h5>Add New Provider Details</h5>
+
+                                            </div>
+                                            <div class="card-body ">
+                                                <form action="" method="POST">
+                                                <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-3" style="text-align: right;"> <label> <b>Provider Id
+                                                                    </b></label></div>
+                                                            <div class="col-md-9 ">
+                                                            
+                                                            <?php
+                                                            $sqlproviderid="select Provider_id from Providers ORDER BY Provider_id DESC";
+                                                            $resultproviderid=mysqli_query($con,$sqlproviderid)or die("Error in familyid section:".mysqli_error($con));
+                                                            if(mysqli_num_rows($resultproviderid)>0)
+                                                            {
+                                                                $row=mysqli_fetch_assoc($resultproviderid);
+                                                                $providerid=++$row['Provider_id'];
+                                                            }
+                                                            else
+                                                            {
+                                                                $="P001";
+                                                            }
+                                            ?> <input type="text" name="txtproviderid" class="form-control"
+                                                                    required></div>
+                                                        </div>
+                                                    </div>
+
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-md-3" style="text-align: right;"> <label> <b>Provider Name
                                                     </b></label></div>
-                                            <div class="col-md-9 "> <input type="text" name="name" class="form-control"
+                                            <div class="col-md-9 "> <input type="text" name="txtname" class="form-control"
                                                     required></div>
                                         </div>
                                     </div>
@@ -64,7 +80,7 @@
                                         <div class="row">
                                             <div class="col-md-3" style="text-align: right;"> <label> <b>Contact Person
                                                     </b></label></div>
-                                            <div class="col-md-9 "> <input type="text" name="contactperson"
+                                            <div class="col-md-9 "> <input type="text" name="txtcontactperson"
                                                     class="form-control" required></div>
 
                                         </div>
@@ -74,30 +90,21 @@
                                             <div class="col-md-3" style="text-align: right;"> <label><b>Phone
                                                         Number</b></label></div>
                                             <div class="col-md-9"><input type="number" onchange="myFunction(this.value)"
-                                                    class="form-control" name="phone" required>
+                                                    class="form-control" name="txtphone" required>
                                                 <p id="phone" style="color: red; "></p>
                                             </div>
 
                                         </div>
                                     </div>
 
-                                    <script>
-                                        function myFunction(val) {
-                                            var n = val.length;
-                                            if (n != 10) {
-                                                document.getElementById("phone").innerHTML =
-                                                    "Phone number have ten numbers";
-                                            } else {
-                                                document.getElementById("phone").innerHTML = "";
-                                            }
-                                        }
-                                    </script>
+                                    
+                                  
                                     <div class="form-group">
                                         <div class="row">
 
                                             <div class="col-md-3" style="text-align: right;"> <label><b> Email-Address
                                                     </b></label></div>
-                                            <div class="col-md-9"><input type="email" class="form-control" name="email"
+                                            <div class="col-md-9"><input type="email" class="form-control" name="txtemail"
                                                     placeholder="name@example.com"></div>
 
                                         </div>
@@ -106,7 +113,7 @@
                                         <div class="row">
                                             <div class="col-md-3" style="text-align: right;"> <label>
                                                     <b>Address</b></label></div>
-                                            <div class="col-md-9"><textarea name="address" id="" cols="30" rows="3"
+                                            <div class="col-md-9"><textarea name="txtaddress" id="" cols="30" rows="3"
                                                     class="form-control"></textarea></div>
                                         </div>
                                     </div>
@@ -119,14 +126,14 @@
                                             <div class="col-md-3" style="text-align: right;"> <label><b>Account
                                                         No</b></label></div>
                                             <div class="col-md-9"><input type="number" class="form-control"
-                                                    name="accountno" required></div>
+                                                    name="txtaccountno" required></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-md-3" style="text-align: right;"> <label> <b>Bank Name
                                                     </b></label></div>
-                                            <div class="col-md-9 "> <input type="text" name="bankname"
+                                            <div class="col-md-9 "> <input type="text" name="txtbankname"
                                                     class="form-control" required></div>
                                         </div>
                                     </div>

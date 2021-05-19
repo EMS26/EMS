@@ -1,10 +1,5 @@
 <?php include_once('../config.php') ?>
 <html lang="en">
-
-<head>
-   
-</head>
-
 <body>
    
         <?php
@@ -25,30 +20,18 @@
                                 if(isset($_POST['btnsubmit']))
                                 {
                                     
-                                    $vehicleno=$_POST['txtvehicleno'];
-                                    $providername=$_POST['txtprovidername'];
-                                    $noofseat=$_POST['txtnoofseats'];
-                                    $vehicletype1=$_POST['txtvehicletype1'];
-                                    $vehicletype=$_POST['txtvtype'];
-                                    $kmrate=$_POST['kmrate'];
-                                    $advanced=$_POST['advanced'];
-
-                                    $sql="insert into vehicle(Vehicle_no,Provider Name,No_of_seat,Vehicle_type,Vec_type,Km_rate,Advance) values ('$vehicleno','$providername',$noofseat,'$vehicletype1,'$vehicletype','$kmrate','$advanced')";
-                                    if(mysqli_query($con,$sql))
                                     {
-                                        ?>
-                                <div class="alert alert-success" role="alert">
-                                    Insert sucessfully!
-                                </div>
-                                <?php  echo "<meta http-equiv='refresh' content='0.6'>"; ?>
-                                <?php
+                                        $sqlinsertfamilydiv="insert into family(familyid,areaid,gsid,address,tpno)
+                                        values('".mysqli_real_escape_string($con,$_POST['txtfamilyid'])."',
+                                        '".mysqli_real_escape_string($con,$_POST['txtareaname'])."',
+                                        '".mysqli_real_escape_string($con,$_POST['txtgsdiv'])."',
+                                        '".mysqli_real_escape_string($con,$_POST['txtaddress'])."',
+                                        '".mysqli_real_escape_string($con,$_POST['txttpno'])."')";
+                                        $resultfamilydiv=mysqli_query($con,$sqlinsertfamilydiv)or die("Error in sqlinsert familydetails section:".mysqli_error($con));
+                                    
+                                        echo '<script> window.location.href="index.php?pg=family.php&option=create&familyid='.$_POST['txtfamilyid'].'"; </script>';
+                                        
                                     }
-                                    else
-                                    {
-                                        echo "Error: " . $sql . "<br>" .
-                                        mysqli_error($con);
-                                    }
-                                }
                                 ?>
                                 <!-- /insert database  -->
 
@@ -145,7 +128,7 @@ echo '<div class="col-md-12">
            <div class="row">
                 <div class="col-md-10"></div>
                 <div class="col-md-1">
-                    <a href="index.php?pg=vehicle.php&option=view"><input type="button" name="submit" style="float:right" value="Add " class="btn btn-success"></a>
+                    <a href="index.php?pg=vehicle.php&option=new"><input type="button" name="submit" style="float:right" value="Add " class="btn btn-success"></a>
                 </div>
                 <div class="col-md-1">
                     <input type="button" name="Print" style="float:left" value="Print " class="btn btn-success">    

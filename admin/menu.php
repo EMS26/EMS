@@ -82,13 +82,16 @@
                 <a href="index.php?pg=vehicle.php&option=view">Vehicles</a>
               </li>
               <li>
-                <a href="index.php?pg=vehicle.php&option=view">Staffs</a>
+                <a href="index.php?pg=staff.php&option=view">Staffs</a>
               </li>
               <li>
-                <a href="index.php?pg=vehicle.php&option=view">Foodmenu</a>
+                <a href="index.php?pg=foodmenu.php&option=view">Foodmenu</a>
               </li>
               <li>
-                <a href="index.php?pg=vehicle.php&option=view">Beautician</a>
+                <a href="index.php?pg=photographerpackage.php&option=view">Photographer</a>
+              </li>
+              <li>
+                <a href="index.php?pg=photographerpackage.php&option=view">Beautician</a>
               </li>
             </ul>
           </div>
@@ -111,7 +114,7 @@
           </div>
         </li>
 
-        <li class="sidebar-dropdown">
+      <!--  <li class="sidebar-dropdown">
           <a href="#">
           <i class="fas fa-camera"></i>
             <span>Photographer</span>
@@ -136,7 +139,7 @@
 
             </ul>
           </div>
-        </li>
+        </li>-->
   
        
 
