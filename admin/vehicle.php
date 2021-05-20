@@ -6,6 +6,7 @@
         if(isset($_GET['option']))
         {
             if($_GET['option']=="new")
+            {
        
         ?>
         
@@ -20,7 +21,6 @@
                                 if(isset($_POST['btnsubmit']))
                                 {
                                     
-                                    {
                                         $sqlinsertfamilydiv="insert into family(familyid,areaid,gsid,address,tpno)
                                         values('".mysqli_real_escape_string($con,$_POST['txtfamilyid'])."',
                                         '".mysqli_real_escape_string($con,$_POST['txtareaname'])."',
@@ -112,6 +112,7 @@
                 </div>
               
                 <?php
+                                
         
     }
     
@@ -160,7 +161,7 @@ echo '<div class="col-md-12">
                 echo '</tbody></table>';
 echo '</div></div></div>';
 
-
+            }
 }
    ?>
 </body>
